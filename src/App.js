@@ -10,7 +10,7 @@ const movies=[
   },
   {
     title:'Aladin',
-    poster:'https://lh3.googleusercontent.com/proxy/hmm1STUc3tEBLvDDjyDzP2yyGLCQ5fljBtkxtBXzMyLJgpcsRStFjuQSPB3iBcmZtamDTrjB8j1F-B2fo5MyypOrIoyuPBnuXUaOZumru-zYirzbmz-cV_cYGt-wx-kn1yL1DSyTJ_FtOR7ekdcmMULe7TKRapHT'
+    poster:'https://lh3.googleusercontent.com/proxy/CdFYuB3EnUhHndPsUCkCbBTk1L9GtKFB0hwS-tsbxjGeW_7uvv-oMwUMSG-NDI-uZQMALJdrBWUY2ATdYA-pTmMN5cUYCs40am7jcWjd07wai1-ixj9htQ'
   },
   {
     title:'Lion King',
@@ -29,7 +29,12 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-       
+      <img id='img' src='https://1000logos.net/wp-content/uploads/2017/05/Walt-Disney-logo.png'/>
+       {movies.map(movie =>{    /*movies array 를 매핑해서 movies에있는 엘리먼트 만큼 사이클이 돌면서 컴포넌트를 만든다.
+        movies는 저 array 이고 movie는 각 배열의 0번방,1번방... 이다.*/
+         // eslint-disable-next-line no-unused-expressions
+        return <Movie title={movie.title} poster={movie.poster} />
+       })}
       </div>
     );
   }
