@@ -1,9 +1,8 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import * as serviceWorker from './serviceWorker';
-
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
 /*   reactDom 은 리액트를 웹사이트에 출력(render) 하는걸 도와주는 모델이다.
      Document Object Model
@@ -13,9 +12,14 @@ import * as serviceWorker from './serviceWorker';
      렌더링을 하면 'root'라는 아이디의 엘리먼트 안에 컴포넌트들이 출력이 된다.*/
 ReactDOM.render(
   <React.StrictMode>
+    <div>
+      <h1 className="sub" color="white">
+        &nbsp;&nbsp;&nbsp;★★★ Movie List ★★★
+      </h1>
+    </div>
     <App />
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
 
 serviceWorker.unregister();

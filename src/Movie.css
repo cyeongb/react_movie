@@ -1,0 +1,80 @@
+.Movie {
+    background-color: cornflowerblue;
+    width: 40%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+    text-overflow: ellipsis;
+    padding: 0 10px;
+    box-shadow: 0 8px 38px gray, 0 5px 12px gray;
+}
+
+
+.Movie_Columns {
+    width: 30%;
+    box-sizing: border-box;
+    text-overflow: ellipsis;
+
+}
+
+.Movie_Column:last-child {
+    padding: 7px 0;
+    width: 78%;
+}
+
+.Movie h1 {
+    font-size: 30px;
+    font-weight: 500;
+
+}
+
+.Movie .Movie_Genres {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.Movie_Genres .Movie_Genre {
+    margin-right: 10px;
+    color: antiquewhite;
+}
+
+.Movie .Movie_Synopsis {
+    text-overflow: ellipsis;
+    color: dimgrey;
+    overflow: hidden;
+}
+
+.Movie .Movie_Poster {
+    max-width: 100%;
+    position: relative;
+    top: -10%;
+    box-shadow: -10px 19px 38px gray, 10px 15px 12px gray;
+    margin: 20px 0 0 70px;
+}
+
+@media screen and (min-width:320px) and (max-width:667px) {
+    .Movies {
+        width: 100%;
+    }
+}
+
+
+@media screen and (min-width:320px) and (max-width:667px) and (orientation : portrait) {
+    .Movie {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    .Movie_Poster {
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
+
+    .Movie_Column {
+        width: 100% !important;
+    }
+}

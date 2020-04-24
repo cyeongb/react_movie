@@ -46,7 +46,7 @@ class App extends Component {
   _callApi = () => {
     return (
       fetch(
-        "https://yts.mx/api/v2/list_movies.json?sort_by=like_count"
+        "https://yts.mx/api/v2/list_movies.json?sort_by=download_count"
       ) /* fetch  promise*/
         /* .then() 은 위의(fetch)작업이 완료가 되면  then을 부른다.(call) 그리고 에러가나면 .catch()가 잡는다. */
         /* then 은 하나의 attribute만 보여준다. 그것은 fetch 의 결과물인데 그걸 지금은 response에 담았음*/
@@ -58,9 +58,10 @@ class App extends Component {
   };
 
   render() {
+    const { movies } = this.state;
     return (
-      <div className="App">
-        {this.state.movies ? this._renderMovies() : " L o a d i n g . . ."}
+      <div className={movies ? "App" : "App--loading"}>
+        {movies ? this._renderMovies() : " L o a d i n g . . ."}
       </div>
     );
   }
