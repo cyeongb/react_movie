@@ -13,9 +13,7 @@ import * as serviceWorker from "./serviceWorker";
 ReactDOM.render(
   <React.StrictMode>
     <div>
-      <h1 className="sub" color="white">
-        &nbsp;&nbsp;&nbsp;★★★ Movie List ★★★
-      </h1>
+      <h1 className="sub">&nbsp;&nbsp;&nbsp;★★★ Movie List ★★★</h1>
     </div>
     <App />
   </React.StrictMode>,

@@ -7,12 +7,12 @@
     flex-wrap: wrap;
     margin-bottom: 50px;
     text-overflow: ellipsis;
-    padding: 0 10px;
+    padding: 0 20px;
     box-shadow: 0 8px 38px gray, 0 5px 12px gray;
 }
 
 
-.Movie_Columns {
+.Movie_Column {
     width: 30%;
     box-sizing: border-box;
     text-overflow: ellipsis;
@@ -20,8 +20,8 @@
 }
 
 .Movie_Column:last-child {
-    padding: 7px 0;
-    width: 78%;
+    padding: 20px 0;
+    width: 60%;
 }
 
 .Movie h1 {
@@ -50,9 +50,9 @@
 .Movie .Movie_Poster {
     max-width: 100%;
     position: relative;
-    top: -10%;
+    top: -20px;
     box-shadow: -10px 19px 38px gray, 10px 15px 12px gray;
-    margin: 20px 0 0 70px;
+    /* margin: 20px 0 0 70px; */
 }
 
 @media screen and (min-width:320px) and (max-width:667px) {
